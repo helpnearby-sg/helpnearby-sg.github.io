@@ -2,24 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element -- Static GitHub Pages build uses public SVG assets. */
 
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const durations = [30, 60, 120];
+const residentFormUrl = "https://my.feishu.cn/share/base/form/shrcnMpUpdNIthdfnMaWtvZNuOe";
+const volunteerFormUrl = "https://my.feishu.cn/share/base/form/shrcnhczRrnwmBZZIFmvXvU4Myd";
 
 export default function Home() {
   const [duration, setDuration] = useState(60);
-  const [residentSent, setResidentSent] = useState(false);
-  const [volunteerSent, setVolunteerSent] = useState(false);
-
-  function submitResident(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setResidentSent(true);
-  }
-
-  function submitVolunteer(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setVolunteerSent(true);
-  }
 
   return (
     <main>
@@ -141,18 +131,10 @@ export default function Home() {
               <h2>Request pilot help</h2>
               <p>Tell us what would make technology a little easier. We will follow up personally if the pilot is available near you.</p>
             </div>
-            {residentSent ? (
-              <div className="success-message" role="status"><span aria-hidden="true">✓</span><h3>Thank you for reaching out.</h3><p>Your interest has been noted for this prototype. In the live pilot, a coordinator would contact you personally.</p><button type="button" onClick={() => setResidentSent(false)}>Send another response</button></div>
-            ) : (
-              <form onSubmit={submitResident}>
-                <div className="field-row"><label>Full name<input required name="resident-name" autoComplete="name" placeholder="Your name" /></label><label>Phone or email<input required name="resident-contact" autoComplete="email" placeholder="How we can reach you" /></label></div>
-                <div className="field-row"><label>Postal code<input required name="resident-postal" inputMode="numeric" placeholder="e.g. 310123" /></label><label>When do you need help?<select required name="timing" defaultValue=""><option value="" disabled>Select one</option><option>Later today</option><option>Schedule for another day</option><option>I am flexible</option></select></label></div>
-                <label>What would you like help with?<select required name="task" defaultValue=""><option value="" disabled>Select a digital task</option><option>Device settings or accessibility</option><option>Calls, messages, or photos</option><option>Understanding an online form</option><option>Learning how an app works</option><option>Something else digital</option></select></label>
-                <label>Tell us a little more<textarea required name="description" rows={4} placeholder="Please do not include passwords, banking details, or other private information." /></label>
-                <label className="check-label"><input required type="checkbox" />I understand this is a non-emergency pilot and a match is not guaranteed.</label>
-                <button className="button button-primary form-button" type="submit">Request pilot help</button>
-              </form>
-            )}
+            <div className="embedded-form-frame">
+              <iframe src={residentFormUrl} title="Request Help Nearby form" loading="lazy" />
+            </div>
+            <p className="form-privacy-note">Your response goes directly into Help Nearby&apos;s private operations workspace.</p>
           </div>
 
           <div className="form-shell volunteer-form" id="volunteer">
@@ -161,18 +143,10 @@ export default function Home() {
               <h2>Share your spare time</h2>
               <p>Join the pilot interest list. When Help Nearby opens in your area, you can choose when, where, and how you help.</p>
             </div>
-            {volunteerSent ? (
-              <div className="success-message" role="status"><span aria-hidden="true">✓</span><h3>You are on the interest list.</h3><p>Your interest has been noted for this prototype. In the live pilot, we would contact you before any task becomes visible.</p><button type="button" onClick={() => setVolunteerSent(false)}>Send another response</button></div>
-            ) : (
-              <form onSubmit={submitVolunteer}>
-                <div className="field-row"><label>Full name<input required name="volunteer-name" autoComplete="name" placeholder="Your name" /></label><label>Phone or email<input required name="volunteer-contact" placeholder="How we can reach you" /></label></div>
-                <div className="field-row"><label>Area or postal code<input required name="volunteer-area" placeholder="Where you are usually available" /></label><label>Typical availability<select required name="availability" defaultValue=""><option value="" disabled>Select one</option><option>30 minutes</option><option>60 minutes</option><option>120 minutes</option><option>It varies</option></select></label></div>
-                <label>What could you help with?<textarea required name="skills" rows={4} placeholder="For example: phone settings, video calls, messaging apps, or online forms." /></label>
-                <label className="check-label"><input required type="checkbox" />I confirm that I am 18 or older.</label>
-                <label className="check-label"><input required type="checkbox" />I understand that pilot volunteers must complete a basic review before helping.</label>
-                <button className="button button-primary form-button" type="submit">Join as a pilot volunteer</button>
-              </form>
-            )}
+            <div className="embedded-form-frame">
+              <iframe src={volunteerFormUrl} title="Volunteer with Help Nearby form" loading="lazy" />
+            </div>
+            <p className="form-privacy-note">Your response goes directly into Help Nearby&apos;s private operations workspace.</p>
           </div>
         </section>
 
