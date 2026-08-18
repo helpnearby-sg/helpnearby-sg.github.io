@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- Static GitHub Pages build uses public SVG assets. */
+
 import { FormEvent, useState } from "react";
 
 const durations = [30, 60, 120];
@@ -24,8 +26,7 @@ export default function Home() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Help Nearby home">
-          <span className="brand-mark" aria-hidden="true">HN</span>
-          <span>Help Nearby</span>
+          <img className="brand-logo" src="./help-nearby-logo.svg" alt="Help Nearby" />
         </a>
         <nav aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
@@ -193,7 +194,7 @@ export default function Home() {
       </div>
 
       <footer>
-        <a className="brand footer-brand" href="#top"><span className="brand-mark" aria-hidden="true">HN</span><span>Help Nearby</span></a>
+        <a className="brand footer-brand" href="#top"><img className="brand-logo" src="./help-nearby-logo.svg" alt="Help Nearby" /></a>
         <p>Small moments of spare time, matched with simple needs nearby.</p>
         <span>Non-profit pilot concept · Singapore</span>
       </footer>

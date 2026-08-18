@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 320" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Help Nearby</title>
+  <desc id="logo-description">Two people surrounding a location marker.</desc>
+
+  <g aria-hidden="true">
+    <circle cx="88" cy="63" r="31" fill="#0B1F3A" />
+    <circle cx="210" cy="63" r="31" fill="#D6C3AE" />
+    <path d="M88 111C38 111 14 148 14 199C14 254 55 286 119 286H150L108 241C77 208 82 165 119 143C130 136 140 132 150 132C132 118 111 111 88 111Z" fill="#0B1F3A" />
+    <path d="M210 111C260 111 284 148 284 199C284 254 243 286 179 286H148L190 241C221 208 216 165 179 143C168 136 158 132 148 132C166 118 187 111 210 111Z" fill="#D6C3AE" />
+    <path d="M150 151C120 151 97 174 97 204C97 243 150 286 150 286C150 286 203 243 203 204C203 174 180 151 150 151Z" fill="#0B1F3A" stroke="#FFFFFF" stroke-width="9" stroke-linejoin="round" />
+  </g>
+
+  <text x="340" y="218" fill="#0B1F3A" font-family="SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="132" font-weight="400" letter-spacing="-2">Help Nearby</text>
+</svg>
