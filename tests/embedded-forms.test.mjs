@@ -19,3 +19,12 @@ test("does not expose private service credentials", async () => {
   assert.doesNotMatch(page, /FEISHU_APP_ID|FEISHU_APP_SECRET|tenant_access_token/i);
   assert.doesNotMatch(page, /spreadsheetId|GOOGLE_API_KEY|private_key/i);
 });
+
+test("uses the four fragmented-time windows and remote-help positioning", async () => {
+  const page = await readFile(pageUrl, "utf8");
+
+  assert.match(page, /const durations = \[10, 20, 30, 60\]/);
+  assert.match(page, /碎片时间/);
+  assert.match(page, /voice or video call/i);
+  assert.doesNotMatch(page, /120 minutes|120m/);
+});

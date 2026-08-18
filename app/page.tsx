@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 
-const durations = [30, 60, 120];
+const durations = [10, 20, 30, 60];
 const residentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfgNYkt0JN6puykb5vSNCORkcOaYT9ZTpZaZV_o0u2e3yZl_g/viewform?embedded=true";
 const volunteerFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScA9XsiBg8_PA2AdQR7tJfPcbIEtU4WMjj0QtSxKxkMooFLbw/viewform?embedded=true";
 
@@ -30,49 +30,49 @@ export default function Home() {
       <div id="main-content">
         <section className="hero" id="top">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="status-dot" aria-hidden="true" />Opening neighbourhood by neighbourhood</div>
-            <h1>A little time can make a big difference nearby.</h1>
-            <p className="hero-lede">Help Nearby connects residents who need simple digital assistance with trusted volunteers who have 30, 60, or 120 minutes to spare.</p>
+            <div className="eyebrow"><span className="status-dot" aria-hidden="true" />AI-assisted community matching</div>
+            <h1>Turn <span lang="zh">碎片时间</span> into help nearby.</h1>
+            <p className="hero-lede">Help Nearby matches residents who need simple digital guidance with volunteers who have 10, 20, 30, or 60 minutes—by call or in a nearby common area.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#request">Request pilot help</a>
               <a className="button button-secondary" href="#volunteer">Volunteer nearby</a>
             </div>
-            <p className="hero-note">Free to use · Non-emergency help · Human-coordinated pilot</p>
+            <p className="hero-note">Free to use · Voice or video call · Common-area meet-up · Human-reviewed pilot</p>
           </div>
 
           <div className="matching-preview" aria-label="Example of a nearby volunteer match">
             <div className="preview-topline"><span>Nearby right now</span><span className="live-label"><i aria-hidden="true" /> Pilot preview</span></div>
             <article className="request-card">
               <div className="request-icon" aria-hidden="true">Aa</div>
-              <div><span className="card-label">Resident request</span><h2>Help enlarge the text on my phone</h2><p>Common area · About 30 minutes</p></div>
+              <div><span className="card-label">Resident request</span><h2>Help me understand this screen</h2><p>Video call · About 10 minutes</p></div>
             </article>
             <div className="match-line" aria-hidden="true"><span /></div>
             <article className="volunteer-card">
               <div className="avatar" aria-hidden="true">J</div>
-              <div className="volunteer-copy"><span className="card-label">Volunteer available</span><h2>Jamie has 60 minutes nearby</h2><p>Digital help · Within 2 km</p></div>
-              <span className="match-badge">Good fit</span>
+              <div className="volunteer-copy"><span className="card-label">Volunteer available</span><h2>Jamie has 20 minutes now</h2><p>Digital guidance · Available by call</p></div>
+              <span className="match-badge">AI suggested</span>
             </article>
-            <div className="availability-row"><span>Spare time</span><div className="time-options" aria-label="Example availability options"><span>30m</span><span className="active">60m</span><span>120m</span></div></div>
+            <div className="availability-row"><span><span lang="zh">碎片时间</span></span><div className="time-options" aria-label="Example availability options"><span>10m</span><span className="active">20m</span><span>30m</span><span>60m</span></div></div>
           </div>
         </section>
 
         <section className="section ai-section" id="ai-assistance">
           <div className="ai-heading">
             <span className="section-kicker">Thoughtful technology, human decisions</span>
-            <h2>AI helps organise the work. People make the match.</h2>
-            <p>Help Nearby uses AI agents to support the pilot behind the scenes—from building the service to turning requests into clear, reviewable information.</p>
+            <h2>An AI agent turns spare moments into clear match suggestions.</h2>
+            <p>Help Nearby uses AI agents to build and improve the service, understand each request, and identify suitable volunteers. People remain in control at every step.</p>
           </div>
           <div className="ai-grid">
             <article><span>01</span><h3>Build and improve</h3><p>AI coding agents help us prototype, test, and improve the service quickly while we learn from residents and volunteers.</p></article>
-            <article><span>02</span><h3>Structure each request</h3><p>AI can organise free-text requests by task, location, timing, and estimated duration, helping coordinators review them consistently.</p></article>
-            <article><span>03</span><h3>Suggest suitable pairings</h3><p>A matching algorithm can suggest volunteers whose area, available time, and digital skills fit the request.</p></article>
+            <article><span>02</span><h3>Understand the request</h3><p>An intake agent can organise the task, preferred call or meeting mode, timing, location, and likely duration for review.</p></article>
+            <article><span>03</span><h3>Recommend a match</h3><p>A matching agent can rank volunteers by skills, availability, distance, language, and whether they can help remotely.</p></article>
           </div>
           <p className="ai-note"><strong>Human-in-the-loop:</strong> AI never approves volunteers, promises fulfilment, or dispatches anyone automatically. A coordinator reviews every pilot match.</p>
         </section>
 
         <section className="trust-row" aria-label="Pilot principles">
           <div><strong>Simple digital help</strong><span>Practical, everyday guidance</span></div>
-          <div><strong>Common areas first</strong><span>Meet in familiar public spaces</span></div>
+          <div><strong>Call or common area</strong><span>Choose remote guidance or a public meeting</span></div>
           <div><strong>People stay in control</strong><span>Every pilot match is reviewed</span></div>
         </section>
 
@@ -80,12 +80,12 @@ export default function Home() {
           <div className="section-heading">
             <span className="section-kicker">How it works</span>
             <h2>Neighbourly help, without the heavy commitment.</h2>
-            <p>Residents ask for one small piece of digital help. Volunteers share a pocket of free time. Help Nearby brings the two together and checks every pilot match.</p>
+            <p>Residents ask for one small piece of digital help. Volunteers share a pocket of <span lang="zh">碎片时间</span>. Help Nearby brings the two together and checks every pilot match.</p>
           </div>
           <div className="steps-grid">
-            <article><span className="step-number">01</span><h3>Tell us what you need</h3><p>Describe a simple digital task and when you would like to meet in a nearby common area.</p></article>
+            <article><span className="step-number">01</span><h3>Tell us what you need</h3><p>Describe a simple digital task and whether you prefer help by voice or video call, or in a nearby common area.</p></article>
             <article><span className="step-number">02</span><h3>We review the request</h3><p>A human coordinator checks that the request is suitable, safe, and clear before contacting volunteers.</p></article>
-            <article><span className="step-number">03</span><h3>Meet someone nearby</h3><p>If a suitable volunteer is available, we introduce both sides and confirm the time and meeting place.</p></article>
+            <article><span className="step-number">03</span><h3>Connect safely</h3><p>If a suitable volunteer is available, we confirm a guided call or a time and public meeting place that works for both sides.</p></article>
           </div>
         </section>
 
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <div className="task-grid">
             <article><span className="task-symbol" aria-hidden="true">T</span><h3>Device settings</h3><p>Text size, brightness, accessibility features, and everyday settings.</p></article>
-            <article><span className="task-symbol" aria-hidden="true">↗</span><h3>Calls and messages</h3><p>Video calls, contact lists, messaging apps, and sharing photos.</p></article>
+            <article><span className="task-symbol" aria-hidden="true">↗</span><h3>Live call guidance</h3><p>Show or describe the problem on a voice or video call while a volunteer talks you through it.</p></article>
             <article><span className="task-symbol" aria-hidden="true">□</span><h3>Online forms</h3><p>Understanding public-service websites and navigating simple forms.</p></article>
             <article><span className="task-symbol" aria-hidden="true">?</span><h3>General guidance</h3><p>Learning how an app works and recognising common online warning signs.</p></article>
           </div>
@@ -108,8 +108,8 @@ export default function Home() {
           <div className="time-card">
             <div className="time-card-copy">
               <span className="section-kicker light">For volunteers</span>
-              <h2>Give the time you already have.</h2>
-              <p>No fixed shifts. No long-term commitment. Share a free window, choose how far you can travel, and only accept tasks that feel right for you.</p>
+              <h2>Your <span lang="zh">碎片时间</span> is enough.</h2>
+              <p>No fixed shifts. No long-term commitment. Share 10, 20, 30, or 60 minutes, choose call or nearby help, and only accept tasks that feel right for you.</p>
               <a className="text-link light-link" href="#volunteer">Join the pilot <span aria-hidden="true">→</span></a>
             </div>
             <div className="time-selector" aria-label="Choose an example availability window">
@@ -133,7 +133,7 @@ export default function Home() {
           </div>
           <div className="safety-grid">
             <article><span aria-hidden="true">18+</span><h3>Approved volunteers</h3><p>Pilot volunteers must be at least 18 and complete a basic identity and safety review.</p></article>
-            <article><span aria-hidden="true">⌂</span><h3>Common areas</h3><p>First meetings happen in familiar shared spaces—not inside private homes.</p></article>
+            <article><span aria-hidden="true">⌂</span><h3>Call or common area</h3><p>Help can happen remotely. In-person pilot meetings use familiar shared spaces—not private homes.</p></article>
             <article><span aria-hidden="true">✓</span><h3>Human review</h3><p>Every request is checked before a volunteer is contacted. There is no automatic dispatch.</p></article>
             <article><span aria-hidden="true">×</span><h3>Clear exclusions</h3><p>No money handling, passwords, banking, medication, personal care, transport, or emergencies.</p></article>
           </div>
@@ -143,8 +143,8 @@ export default function Home() {
           <div className="form-shell resident-form" id="request">
             <div className="form-intro">
               <span className="section-kicker">For residents</span>
-              <h2>Request pilot help</h2>
-              <p>Tell us what would make technology a little easier. We will follow up personally if the pilot is available near you.</p>
+              <h2>Get help with one small digital task.</h2>
+              <p>Choose a short time window and tell us whether a call or nearby help would suit you.</p>
             </div>
             <div className="embedded-form-frame">
               <iframe src={residentFormUrl} title="Request Help Nearby form" loading="lazy" />
@@ -155,8 +155,8 @@ export default function Home() {
           <div className="form-shell volunteer-form" id="volunteer">
             <div className="form-intro">
               <span className="section-kicker">For volunteers</span>
-              <h2>Share your spare time</h2>
-              <p>Join the pilot interest list. When Help Nearby opens in your area, you can choose when, where, and how you help.</p>
+              <h2>Make a spare moment useful.</h2>
+              <p>Offer 10, 20, 30, or 60 minutes by call or nearby, without committing to a fixed shift.</p>
             </div>
             <div className="embedded-form-frame">
               <iframe src={volunteerFormUrl} title="Volunteer with Help Nearby form" loading="lazy" />
@@ -174,6 +174,7 @@ export default function Home() {
           <div className="section-heading narrow"><span className="section-kicker">Questions, answered plainly</span><h2>Before you take part</h2></div>
           <div className="faq-list">
             <details><summary>Is Help Nearby an emergency service?<span aria-hidden="true">+</span></summary><p>No. Help Nearby is only for simple, non-urgent digital assistance. For emergencies, contact the appropriate emergency service.</p></details>
+            <details><summary>Can I get help through a call?<span aria-hidden="true">+</span></summary><p>Yes. Suitable requests may be handled through a guided voice or video call. You stay in control of your device and should never reveal passwords or private account details.</p></details>
             <details><summary>Does it cost anything?<span aria-hidden="true">+</span></summary><p>No. The pilot is free for residents, and volunteers are not paid or tipped.</p></details>
             <details><summary>Will a volunteer handle my phone or password?<span aria-hidden="true">+</span></summary><p>You should remain in control of your device. Volunteers must never request passwords, banking details, or access to private accounts.</p></details>
             <details><summary>Does submitting a form guarantee help?<span aria-hidden="true">+</span></summary><p>No. The pilot will open in selected areas, and every request depends on suitability and volunteer availability.</p></details>
@@ -184,7 +185,7 @@ export default function Home() {
 
       <footer>
         <a className="brand footer-brand" href="#top"><img className="brand-logo" src="./help-nearby-logo.svg" alt="Help Nearby" /></a>
-        <p>Small moments of spare time, matched with simple needs nearby.</p>
+        <p><span lang="zh">碎片时间</span>, matched with simple needs nearby.</p>
         <span>Non-profit pilot concept · Singapore</span>
       </footer>
     </main>
