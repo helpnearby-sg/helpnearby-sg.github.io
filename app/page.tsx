@@ -5,8 +5,8 @@
 import { useState } from "react";
 
 const durations = [30, 60, 120];
-const residentFormUrl = "https://my.feishu.cn/share/base/form/shrcnMpUpdNIthdfnMaWtvZNuOe";
-const volunteerFormUrl = "https://my.feishu.cn/share/base/form/shrcnhczRrnwmBZZIFmvXvU4Myd";
+const residentFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfgNYkt0JN6puykb5vSNCORkcOaYT9ZTpZaZV_o0u2e3yZl_g/viewform?embedded=true";
+const volunteerFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScA9XsiBg8_PA2AdQR7tJfPcbIEtU4WMjj0QtSxKxkMooFLbw/viewform?embedded=true";
 
 export default function Home() {
   const [duration, setDuration] = useState(60);
@@ -20,6 +20,7 @@ export default function Home() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
+          <a href="#ai-assistance">How AI helps</a>
           <a href="#help">What we help with</a>
           <a href="#safety">Safety</a>
           <a className="nav-cta" href="#volunteer">Volunteer nearby</a>
@@ -53,6 +54,20 @@ export default function Home() {
             </article>
             <div className="availability-row"><span>Spare time</span><div className="time-options" aria-label="Example availability options"><span>30m</span><span className="active">60m</span><span>120m</span></div></div>
           </div>
+        </section>
+
+        <section className="section ai-section" id="ai-assistance">
+          <div className="ai-heading">
+            <span className="section-kicker">Thoughtful technology, human decisions</span>
+            <h2>AI helps organise the work. People make the match.</h2>
+            <p>Help Nearby uses AI agents to support the pilot behind the scenes—from building the service to turning requests into clear, reviewable information.</p>
+          </div>
+          <div className="ai-grid">
+            <article><span>01</span><h3>Build and improve</h3><p>AI coding agents help us prototype, test, and improve the service quickly while we learn from residents and volunteers.</p></article>
+            <article><span>02</span><h3>Structure each request</h3><p>AI can organise free-text requests by task, location, timing, and estimated duration, helping coordinators review them consistently.</p></article>
+            <article><span>03</span><h3>Suggest suitable pairings</h3><p>A matching algorithm can suggest volunteers whose area, available time, and digital skills fit the request.</p></article>
+          </div>
+          <p className="ai-note"><strong>Human-in-the-loop:</strong> AI never approves volunteers, promises fulfilment, or dispatches anyone automatically. A coordinator reviews every pilot match.</p>
         </section>
 
         <section className="trust-row" aria-label="Pilot principles">
@@ -152,7 +167,7 @@ export default function Home() {
 
         <section className="section partner-section">
           <div><span className="section-kicker light">For community organisations</span><h2>Help us open the right neighbourhood first.</h2></div>
-          <div><p>We are looking for organisations that know local residents, can offer a familiar common space, and want to explore a simple digital-help pilot.</p><a className="button partner-button" href="mailto:hello@helpnearby.org">Discuss a pilot</a></div>
+          <div><p>We are looking for organisations that know local residents, can offer a familiar common space, and want to explore a simple digital-help pilot.</p><a className="button partner-button" href="mailto:help.nearbysg@gmail.com">Discuss a pilot</a></div>
         </section>
 
         <section className="section faq-section">

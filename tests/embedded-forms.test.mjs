@@ -4,17 +4,18 @@ import test from "node:test";
 
 const pageUrl = new URL("../app/page.tsx", import.meta.url);
 
-test("embeds the two public Feishu intake forms", async () => {
+test("embeds the two public Google intake forms", async () => {
   const page = await readFile(pageUrl, "utf8");
 
-  assert.match(page, /https:\/\/my\.feishu\.cn\/share\/base\/form\/shrcnMpUpdNIthdfnMaWtvZNuOe/);
-  assert.match(page, /https:\/\/my\.feishu\.cn\/share\/base\/form\/shrcnhczRrnwmBZZIFmvXvU4Myd/);
+  assert.match(page, /1FAIpQLSfgNYkt0JN6puykb5vSNCORkcOaYT9ZTpZaZV_o0u2e3yZl_g\/viewform\?embedded=true/);
+  assert.match(page, /1FAIpQLScA9XsiBg8_PA2AdQR7tJfPcbIEtU4WMjj0QtSxKxkMooFLbw\/viewform\?embedded=true/);
   assert.match(page, /title="Request Help Nearby form"/);
   assert.match(page, /title="Volunteer with Help Nearby form"/);
 });
 
-test("does not expose Feishu application credentials", async () => {
+test("does not expose private service credentials", async () => {
   const page = await readFile(pageUrl, "utf8");
 
   assert.doesNotMatch(page, /FEISHU_APP_ID|FEISHU_APP_SECRET|tenant_access_token/i);
+  assert.doesNotMatch(page, /spreadsheetId|GOOGLE_API_KEY|private_key/i);
 });
