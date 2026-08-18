@@ -20,11 +20,14 @@ test("does not expose private service credentials", async () => {
   assert.doesNotMatch(page, /spreadsheetId|GOOGLE_API_KEY|private_key/i);
 });
 
-test("uses the four fragmented-time windows and remote-help positioning", async () => {
+test("uses four spare-time windows and broad everyday-help positioning", async () => {
   const page = await readFile(pageUrl, "utf8");
 
   assert.match(page, /const durations = \[10, 20, 30, 60\]/);
-  assert.match(page, /碎片时间/);
+  assert.match(page, /spare time/i);
+  assert.match(page, /Parcel or grocery collection/i);
   assert.match(page, /voice or video call/i);
+  assert.doesNotMatch(page, /[㐀-鿿]/u);
+  assert.doesNotMatch(page, /focuses only on straightforward digital assistance/i);
   assert.doesNotMatch(page, /120 minutes|120m/);
 });

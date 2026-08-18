@@ -31,8 +31,8 @@ export default function Home() {
         <section className="hero" id="top">
           <div className="hero-copy">
             <div className="eyebrow"><span className="status-dot" aria-hidden="true" />AI-assisted community matching</div>
-            <h1>Turn <span lang="zh">碎片时间</span> into help nearby.</h1>
-            <p className="hero-lede">Help Nearby matches residents who need simple digital guidance with volunteers who have 10, 20, 30, or 60 minutes—by call or in a nearby common area.</p>
+            <h1>Turn spare time into help nearby.</h1>
+            <p className="hero-lede">Help Nearby connects residents who need simple, everyday assistance with volunteers who have 10, 20, 30, or 60 minutes to help—by call or in a nearby common area.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#request">Request pilot help</a>
               <a className="button button-secondary" href="#volunteer">Volunteer nearby</a>
@@ -44,15 +44,15 @@ export default function Home() {
             <div className="preview-topline"><span>Nearby right now</span><span className="live-label"><i aria-hidden="true" /> Pilot preview</span></div>
             <article className="request-card">
               <div className="request-icon" aria-hidden="true">Aa</div>
-              <div><span className="card-label">Resident request</span><h2>Help me understand this screen</h2><p>Video call · About 10 minutes</p></div>
+              <div><span className="card-label">Resident request</span><h2>Help me collect a parcel</h2><p>Nearby common area · About 20 minutes</p></div>
             </article>
             <div className="match-line" aria-hidden="true"><span /></div>
             <article className="volunteer-card">
               <div className="avatar" aria-hidden="true">J</div>
-              <div className="volunteer-copy"><span className="card-label">Volunteer available</span><h2>Jamie has 20 minutes now</h2><p>Digital guidance · Available by call</p></div>
+              <div className="volunteer-copy"><span className="card-label">Volunteer available</span><h2>Jamie has 20 minutes now</h2><p>Errands and practical help · Available nearby</p></div>
               <span className="match-badge">AI suggested</span>
             </article>
-            <div className="availability-row"><span><span lang="zh">碎片时间</span></span><div className="time-options" aria-label="Example availability options"><span>10m</span><span className="active">20m</span><span>30m</span><span>60m</span></div></div>
+            <div className="availability-row"><span>Spare time</span><div className="time-options" aria-label="Example availability options"><span>10m</span><span className="active">20m</span><span>30m</span><span>60m</span></div></div>
           </div>
         </section>
 
@@ -71,7 +71,7 @@ export default function Home() {
         </section>
 
         <section className="trust-row" aria-label="Pilot principles">
-          <div><strong>Simple digital help</strong><span>Practical, everyday guidance</span></div>
+          <div><strong>Simple everyday help</strong><span>Practical, clearly defined tasks</span></div>
           <div><strong>Call or common area</strong><span>Choose remote guidance or a public meeting</span></div>
           <div><strong>People stay in control</strong><span>Every pilot match is reviewed</span></div>
         </section>
@@ -80,10 +80,10 @@ export default function Home() {
           <div className="section-heading">
             <span className="section-kicker">How it works</span>
             <h2>Neighbourly help, without the heavy commitment.</h2>
-            <p>Residents ask for one small piece of digital help. Volunteers share a pocket of <span lang="zh">碎片时间</span>. Help Nearby brings the two together and checks every pilot match.</p>
+            <p>Residents ask for help with one small everyday task. Volunteers share a short pocket of spare time. Help Nearby brings the two together and checks every pilot match.</p>
           </div>
           <div className="steps-grid">
-            <article><span className="step-number">01</span><h3>Tell us what you need</h3><p>Describe a simple digital task and whether you prefer help by voice or video call, or in a nearby common area.</p></article>
+            <article><span className="step-number">01</span><h3>Tell us what you need</h3><p>Describe a simple, non-urgent task and whether you prefer help by voice or video call, or in a nearby common area.</p></article>
             <article><span className="step-number">02</span><h3>We review the request</h3><p>A human coordinator checks that the request is suitable, safe, and clear before contacting volunteers.</p></article>
             <article><span className="step-number">03</span><h3>Connect safely</h3><p>If a suitable volunteer is available, we confirm a guided call or a time and public meeting place that works for both sides.</p></article>
           </div>
@@ -91,16 +91,16 @@ export default function Home() {
 
         <section className="section help-section" id="help">
           <div className="help-copy">
-            <span className="section-kicker">Start with the basics</span>
-            <h2>Technology should make daily life easier—not leave anyone behind.</h2>
-            <p>Our first pilot focuses only on straightforward digital assistance. Volunteers guide; residents keep control of their own devices and private information.</p>
-            <div className="boundary-note"><span aria-hidden="true">!</span><p><strong>We will never ask for passwords.</strong> Help Nearby does not support banking, payments, medical care, transport, or emergencies.</p></div>
+            <span className="section-kicker">Help with the small things</span>
+            <h2>Everyday tasks feel lighter when someone nearby can help.</h2>
+            <p>Our pilot focuses on straightforward, short tasks that can be completed safely by call or in a familiar common area.</p>
+            <div className="boundary-note"><span aria-hidden="true">!</span><p><strong>Clear boundaries keep the pilot safe.</strong> No cash handling, banking, passwords, medication, medical care, transport, heavy lifting, personal care, or emergency requests.</p></div>
           </div>
           <div className="task-grid">
-            <article><span className="task-symbol" aria-hidden="true">T</span><h3>Device settings</h3><p>Text size, brightness, accessibility features, and everyday settings.</p></article>
-            <article><span className="task-symbol" aria-hidden="true">↗</span><h3>Live call guidance</h3><p>Show or describe the problem on a voice or video call while a volunteer talks you through it.</p></article>
-            <article><span className="task-symbol" aria-hidden="true">□</span><h3>Online forms</h3><p>Understanding public-service websites and navigating simple forms.</p></article>
-            <article><span className="task-symbol" aria-hidden="true">?</span><h3>General guidance</h3><p>Learning how an app works and recognising common online warning signs.</p></article>
+            <article><span className="task-symbol" aria-hidden="true">□</span><h3>Parcel or grocery collection</h3><p>Collecting prepaid items nearby and bringing them to an agreed common area.</p></article>
+            <article><span className="task-symbol" aria-hidden="true">↗</span><h3>Simple shopping</h3><p>Picking up a small prepaid purchase without volunteers advancing or handling money.</p></article>
+            <article><span className="task-symbol" aria-hidden="true">T</span><h3>Device and online guidance</h3><p>Everyday settings, video calls, messaging apps, and understanding simple online forms.</p></article>
+            <article><span className="task-symbol" aria-hidden="true">?</span><h3>General practical help</h3><p>Other short, non-urgent requests that fit the pilot&apos;s safety boundaries.</p></article>
           </div>
         </section>
 
@@ -108,7 +108,7 @@ export default function Home() {
           <div className="time-card">
             <div className="time-card-copy">
               <span className="section-kicker light">For volunteers</span>
-              <h2>Your <span lang="zh">碎片时间</span> is enough.</h2>
+              <h2>Your spare time is enough.</h2>
               <p>No fixed shifts. No long-term commitment. Share 10, 20, 30, or 60 minutes, choose call or nearby help, and only accept tasks that feel right for you.</p>
               <a className="text-link light-link" href="#volunteer">Join the pilot <span aria-hidden="true">→</span></a>
             </div>
@@ -135,7 +135,7 @@ export default function Home() {
             <article><span aria-hidden="true">18+</span><h3>Approved volunteers</h3><p>Pilot volunteers must be at least 18 and complete a basic identity and safety review.</p></article>
             <article><span aria-hidden="true">⌂</span><h3>Call or common area</h3><p>Help can happen remotely. In-person pilot meetings use familiar shared spaces—not private homes.</p></article>
             <article><span aria-hidden="true">✓</span><h3>Human review</h3><p>Every request is checked before a volunteer is contacted. There is no automatic dispatch.</p></article>
-            <article><span aria-hidden="true">×</span><h3>Clear exclusions</h3><p>No money handling, passwords, banking, medication, personal care, transport, or emergencies.</p></article>
+            <article><span aria-hidden="true">×</span><h3>Clear exclusions</h3><p>No cash handling, banking, passwords, medication, medical care, transport, heavy lifting, personal care, or emergencies.</p></article>
           </div>
         </section>
 
@@ -143,7 +143,7 @@ export default function Home() {
           <div className="form-shell resident-form" id="request">
             <div className="form-intro">
               <span className="section-kicker">For residents</span>
-              <h2>Get help with one small digital task.</h2>
+              <h2>Get help with one small everyday task.</h2>
               <p>Choose a short time window and tell us whether a call or nearby help would suit you.</p>
             </div>
             <div className="embedded-form-frame">
@@ -167,25 +167,25 @@ export default function Home() {
 
         <section className="section partner-section">
           <div><span className="section-kicker light">For community organisations</span><h2>Help us open the right neighbourhood first.</h2></div>
-          <div><p>We are looking for organisations that know local residents, can offer a familiar common space, and want to explore a simple digital-help pilot.</p><a className="button partner-button" href="mailto:help.nearbysg@gmail.com">Discuss a pilot</a></div>
+          <div><p>We are looking for organisations that know local residents, can offer a familiar common space, and want to explore a simple community-help pilot.</p><a className="button partner-button" href="mailto:help.nearbysg@gmail.com">Discuss a pilot</a></div>
         </section>
 
         <section className="section faq-section">
           <div className="section-heading narrow"><span className="section-kicker">Questions, answered plainly</span><h2>Before you take part</h2></div>
           <div className="faq-list">
-            <details><summary>Is Help Nearby an emergency service?<span aria-hidden="true">+</span></summary><p>No. Help Nearby is only for simple, non-urgent digital assistance. For emergencies, contact the appropriate emergency service.</p></details>
+            <details><summary>Is Help Nearby an emergency service?<span aria-hidden="true">+</span></summary><p>No. Help Nearby is only for simple, non-urgent everyday requests. For emergencies, contact the appropriate emergency service.</p></details>
             <details><summary>Can I get help through a call?<span aria-hidden="true">+</span></summary><p>Yes. Suitable requests may be handled through a guided voice or video call. You stay in control of your device and should never reveal passwords or private account details.</p></details>
             <details><summary>Does it cost anything?<span aria-hidden="true">+</span></summary><p>No. The pilot is free for residents, and volunteers are not paid or tipped.</p></details>
             <details><summary>Will a volunteer handle my phone or password?<span aria-hidden="true">+</span></summary><p>You should remain in control of your device. Volunteers must never request passwords, banking details, or access to private accounts.</p></details>
             <details><summary>Does submitting a form guarantee help?<span aria-hidden="true">+</span></summary><p>No. The pilot will open in selected areas, and every request depends on suitability and volunteer availability.</p></details>
-            <details><summary>Why start with digital assistance?<span aria-hidden="true">+</span></summary><p>It is a common, practical need that can often be solved in a short session without money, transport, or entering a private home.</p></details>
+            <details><summary>What kind of help can I request?<span aria-hidden="true">+</span></summary><p>Short, clearly defined tasks such as collecting a prepaid parcel or grocery order, simple prepaid shopping, device setup, online forms, and general digital guidance.</p></details>
           </div>
         </section>
       </div>
 
       <footer>
         <a className="brand footer-brand" href="#top"><img className="brand-logo" src="./help-nearby-logo.svg" alt="Help Nearby" /></a>
-        <p><span lang="zh">碎片时间</span>, matched with simple needs nearby.</p>
+        <p>Spare time, matched with simple needs nearby.</p>
         <span>Non-profit pilot concept · Singapore</span>
       </footer>
     </main>
